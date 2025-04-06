@@ -1,6 +1,7 @@
 <template >
    <div class="overflow-x-auto">
     <Link href="products/create" class="btn btn-primary m-[20px] w-[200px]">Create Product</Link>
+    <Link href="/" class="btn btn-accent m-[20px] w-[200px]">🏠 Home</Link>
   <table class="table">
     <!-- head -->
     <thead>
@@ -14,7 +15,7 @@
     </thead>
     <tbody>
       <!-- row 1 -->
-      <tr v-for="product in products">
+      <tr v-for="product in products.data">
         <th>{{product.name}}</th>
         <td>{{ product.price }}$</td>
         <td>{{ product.description }}</td>
@@ -27,9 +28,20 @@
 
     </tbody>
   </table>
+  <div class="join flex justify-center my-[20px]">
+
+  <Link class="join-item btn" v-for="link in products.links" :href="link.url || false" v-html="link.label" ></Link>
+
 </div>
+</div>
+
 </template>
 <script>
+
+
+
+
+
 export default {
 props:["products"],
 setup(){

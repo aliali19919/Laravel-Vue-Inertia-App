@@ -1,4 +1,5 @@
 <template>
+
     <div class="max-w-md mx-auto p-6 bg-base-100 shadow-xl rounded-xl my-[200px]">
       <h2 class="text-2xl font-bold mb-4">Create Product</h2>
       <form class="space-y-4" @submit.prevent="submit">
@@ -30,12 +31,17 @@
         <div class="form-control mt-6">
           <button :disabled="form.processing" type="submit" class="btn btn-primary w-full">Create Product</button>
         </div>
-
+        <Link href="/products" class="btn btn-secondary ms-[130px]"> ⬅️ Back To Products</Link>
       </form>
     </div>
+
+
     </template>
 <script>
 import { useForm } from '@inertiajs/inertia-vue3';
+
+
+
 
 export default {
 setup(){

@@ -29,6 +29,7 @@
         <div class="form-control mt-6">
           <button :disabled="form.processing" type="submit" class="btn btn-primary w-full">EditProduct</button>
         </div>
+        <Link href="/products" class="btn btn-secondary ms-[130px]"> ⬅️ Back To Products</Link>
 
       </form>
     </div>
